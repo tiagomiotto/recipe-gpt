@@ -3,13 +3,25 @@ import './App.css';
 import Button from '@mui/material/Button';
 import { FormGroup, FormControlLabel, Checkbox, TextField } from '@mui/material';
 import { useForm } from "react-hook-form";
+import { useState } from 'react';
 
 function App() {
 
   const { register, handleSubmit, reset, control, setValue } = useForm();
 
+  const [ingredients, setIngredients] = useState("");
+
   const submit = async (data) => {
-    window.alert(JSON.stringify(data));
+
+    if (data.ingredients) {
+
+      setIngredients(data.ingredients.join(", "));
+
+    }
+    else {
+      window.alert("Please enter ingredients");
+    }
+
   };
 
   const { ref, ...rest } = register("ingredients");
