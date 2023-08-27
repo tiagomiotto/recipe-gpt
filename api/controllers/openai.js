@@ -19,7 +19,7 @@ const recipeCompletion = async (request) => {
             "role": "user",
             "content": request
         }],
-        temperature: 1.5,
+        temperature: Math.random() * (1.5 - 1.2) + 1.2,
         max_tokens: 1130,
         top_p: 1,
         frequency_penalty: 0,
