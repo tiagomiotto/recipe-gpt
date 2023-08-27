@@ -2,14 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 import Button from '@mui/material/Button';
 import { FormGroup, FormControlLabel, Checkbox, TextField } from '@mui/material';
-
+import { useForm } from "react-hook-form";
 
 function App() {
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    alert("Form Submitted");
-  }
+  const { register, handleSubmit, reset, control, setValue } = useForm();
+
+  const submit = async (data) => {
+    window.alert(JSON.stringify(data));
+  };
+
+  const { ref, ...rest } = register("ingredients");
   return (
     <div className="App">
       <header className="App-header">
@@ -19,38 +22,38 @@ function App() {
       <section>
         <p>Enter a list of ingredients and a time limit and we will generate a recipe for you!</p>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(submit)}>
           <h2>🍗 Protein</h2>
           <FormGroup className='ingredient-form' row={true}>
-            <FormControlLabel control={<Checkbox />} label="Beef" />
-            <FormControlLabel control={<Checkbox />} label="Chicken" />
-            <FormControlLabel control={<Checkbox />} label="Pork" />
-            <FormControlLabel control={<Checkbox />} label="Fish" />
+            <FormControlLabel control={<Checkbox {...rest} inputRef={ref} />} label="Beef" value="beef" />
+            <FormControlLabel control={<Checkbox {...rest} inputRef={ref} />} label="Chicken" value="chicken" />
+            <FormControlLabel control={<Checkbox {...rest} inputRef={ref} />} label="Pork" value="pork" />
+            <FormControlLabel control={<Checkbox {...rest} inputRef={ref} />} label="Fish" value="fish" />
           </FormGroup>
 
           <h2>🍅 Vegetables</h2>
           <FormGroup className='ingredient-form' row={true}>
-            <FormControlLabel control={<Checkbox />} label="Tomato" />
-            <FormControlLabel control={<Checkbox />} label="Lettuce" />
-            <FormControlLabel control={<Checkbox />} label="Spinach" />
-            <FormControlLabel control={<Checkbox />} label="Carrots" />
+            <FormControlLabel control={<Checkbox {...rest} inputRef={ref} />} label="Tomato" value="tomato" />
+            <FormControlLabel control={<Checkbox {...rest} inputRef={ref} />} label="Lettuce" value="lettuce" />
+            <FormControlLabel control={<Checkbox {...rest} inputRef={ref} />} label="Spinach" value="spinach" />
+            <FormControlLabel control={<Checkbox {...rest} inputRef={ref} />} label="Carrots" value="carrots" />
           </FormGroup>
 
           <h2>🌾 Carbs</h2>
           <FormGroup className='ingredient-form' row={true}>
-            <FormControlLabel control={<Checkbox />} label="Rice" />
-            <FormControlLabel control={<Checkbox />} label="Pasta" />
-            <FormControlLabel control={<Checkbox />} label="Potato" />
-            <FormControlLabel control={<Checkbox />} label="Bread" />
+            <FormControlLabel control={<Checkbox {...rest} inputRef={ref} />} label="Rice" value="rice" />
+            <FormControlLabel control={<Checkbox {...rest} inputRef={ref} />} label="Pasta" value="pasta" />
+            <FormControlLabel control={<Checkbox {...rest} inputRef={ref} />} label="Potato" value="potato" />
+            <FormControlLabel control={<Checkbox {...rest} inputRef={ref} />} label="Bread" value="bread" />
           </FormGroup>
 
           <h2>🌶️ Spices</h2>
           <FormGroup className='ingredient-form' row={true}>
-            <FormControlLabel control={<Checkbox />} label="Onion" />
-            <FormControlLabel control={<Checkbox />} label="Garlic" />
-            <FormControlLabel control={<Checkbox />} label="Pepper" />
-            <FormControlLabel control={<Checkbox />} label="Salt" />
-            <FormControlLabel control={<Checkbox />} label="Basil" />
+            <FormControlLabel control={<Checkbox {...rest} inputRef={ref} />} label="Onion" value="onion" />
+            <FormControlLabel control={<Checkbox {...rest} inputRef={ref} />} label="Garlic" value="garlic" />
+            <FormControlLabel control={<Checkbox {...rest} inputRef={ref} />} label="Pepper" value="pepper" />
+            <FormControlLabel control={<Checkbox {...rest} inputRef={ref} />} label="Salt" value="salt" />
+            <FormControlLabel control={<Checkbox {...rest} inputRef={ref} />} label="Basil" value="basil" />
           </FormGroup>
 
           <h2>Other</h2>
