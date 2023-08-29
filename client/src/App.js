@@ -4,18 +4,22 @@ import Button from '@mui/material/Button';
 import { FormGroup, FormControlLabel, Checkbox, TextField } from '@mui/material';
 import { useForm } from "react-hook-form";
 import { useState } from 'react';
+import RecipeCard from './RecipeCard';
 
 function App() {
 
   const { register, handleSubmit, reset, control, setValue } = useForm();
 
   const [ingredients, setIngredients] = useState("");
+  const [recipe, setRecipe] = useState("");
+  const [showRecipe, setShowRecipe] = useState(false);
 
   const submit = async (data) => {
 
     if (data.ingredients) {
 
       setIngredients(data.ingredients.join(", "));
+      setShowRecipe(true);
 
     }
     else {
@@ -73,7 +77,7 @@ function App() {
 
           <Button variant="contained" type="submit">Generate Recipe</Button>
 
-
+          {showRecipe && <RecipeCard recipe={ingredients} />}
         </form>
       </section>
 
