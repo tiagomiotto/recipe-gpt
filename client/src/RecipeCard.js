@@ -12,7 +12,7 @@ export default function RecipeCard({ recipe, handleClose }) {
     console.log(recipe);
     return (
         <Card style={{
-            position: "absolute", top: "10%", zIndex: '2'
+            position: "relative", top: "10%", zIndex: '2', margin: "auto", backgroundColor: "white",
         }} sx={{ maxWidth: "80%" }} display="flex" >
             <IconButton style={{ display: "flex", alignSelf: "end" }} onClick={handleClose}>
                 <CloseIcon style={{ alignSelf: "end" }} />
