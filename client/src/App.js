@@ -44,7 +44,7 @@ function App() {
       </header>
 
       <section>
-        <p>Enter a list of ingredients and a time limit and we will generate a recipe for you!</p>
+        <p>Enter a list of ingredients and I will generate a recipe for you!</p>
 
         <form onSubmit={handleSubmit(submit)}>
           <h2>🍗 Protein</h2>
