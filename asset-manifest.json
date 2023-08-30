@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/recipe-gpt/static/css/main.251de1f1.css",
-    "main.js": "/recipe-gpt/static/js/main.7bd36eef.js",
+    "main.css": "/recipe-gpt/static/css/main.662667cd.css",
+    "main.js": "/recipe-gpt/static/js/main.a219766c.js",
     "static/js/787.c4e7f8f9.chunk.js": "/recipe-gpt/static/js/787.c4e7f8f9.chunk.js",
     "static/media/logo.svg": "/recipe-gpt/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/recipe-gpt/index.html",
-    "main.251de1f1.css.map": "/recipe-gpt/static/css/main.251de1f1.css.map",
-    "main.7bd36eef.js.map": "/recipe-gpt/static/js/main.7bd36eef.js.map",
+    "main.662667cd.css.map": "/recipe-gpt/static/css/main.662667cd.css.map",
+    "main.a219766c.js.map": "/recipe-gpt/static/js/main.a219766c.js.map",
     "787.c4e7f8f9.chunk.js.map": "/recipe-gpt/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.251de1f1.css",
-    "static/js/main.7bd36eef.js"
+    "static/css/main.662667cd.css",
+    "static/js/main.a219766c.js"
   ]
 }
