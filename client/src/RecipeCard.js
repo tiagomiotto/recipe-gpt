@@ -14,10 +14,10 @@ export default function RecipeCard({ recipe, handleClose }) {
         <Card style={{
             position: "absolute", top: "10%", zIndex: '2'
         }} sx={{ maxWidth: "80%" }} display="flex" >
+            <IconButton style={{ display: "flex", alignSelf: "end" }} onClick={handleClose}>
+                <CloseIcon style={{ alignSelf: "end" }} />
+            </IconButton>
             <CardContent>
-                <IconButton onClick={handleClose}>
-                    <CloseIcon />
-                </IconButton>
                 <Typography variant="body1"
                     style={{ whiteSpace: 'pre-line' }} display="block" xcolor="text.secondary">
                     {recipe}
