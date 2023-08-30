@@ -27,11 +27,11 @@
     "morgan": "~1.9.1",
     "openai": "^4.0.1",
     "serverless-http": "^3.2.0",
-    "utf-8-validate": "^5.0.10"
+    "utf-8-validate": "^5.0.10",
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.3"
   },
   "devDependencies": {
-    "connect-livereload": "^0.6.1",
-    "livereload": "^0.9.3",
     "nodemon": "^3.0.1",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
