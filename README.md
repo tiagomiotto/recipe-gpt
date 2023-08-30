@@ -1,4 +1,4 @@
-# Recipe Generator Website
+# Recipe GPT
 
 Welcome to the Recipe Generator website! This project combines an Express.js backend with a React frontend and the Material UI to provide users with a seamless experience for generating recipes based on a list of ingredients. The integration of the GPT-3.5 API adds a touch of artificial intelligence to create unique and customized recipes.
 
@@ -94,7 +94,7 @@ We welcome contributions to improve the Recipe Generator project! To contribute,
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE), which means you're free to use, modify, and distribute the code as you please.
+This project is licensed under the [GNU License](LICENSE), which means you're free to use, modify, and distribute the code as you please.
 
 ---
 
