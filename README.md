@@ -1,8 +1,9 @@
 # Recipe Generator Website
 
-Welcome to the Recipe Generator website! This project combines an Express.js backend with a React frontend to provide users with a seamless experience for generating recipes based on a list of ingredients. The integration of the GPT-3.5 API adds a touch of artificial intelligence to create unique and customized recipes.
+Welcome to the Recipe Generator website! This project combines an Express.js backend with a React frontend and the Material UI to provide users with a seamless experience for generating recipes based on a list of ingredients. The integration of the GPT-3.5 API adds a touch of artificial intelligence to create unique and customized recipes.
 
-![Recipe Generator Screenshot](screenshot.png)
+<img src='screenshot.png' width='300' class="center">
+
 
 ## Table of Contents
 
