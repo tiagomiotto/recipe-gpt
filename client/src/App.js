@@ -19,14 +19,22 @@ function App() {
     if (data.ingredients) {
 
       setIngredients(data.ingredients.join(", "));
-      setShowRecipe(true);
 
+      const response = await fetch(`http://localhost:9000/?ingredients=${data.ingredients.join(", ")}`);
+      const recipeText = await response.text();
+      setRecipe(recipeText);
+      // console.log(recipeText);
+      setShowRecipe(true);
     }
     else {
       window.alert("Please enter ingredients");
     }
 
   };
+
+  const handleClose = () => {
+    setShowRecipe(false);
+  }
 
   const { ref, ...rest } = register("ingredients");
   return (
@@ -75,9 +83,9 @@ function App() {
           <h2>Other</h2>
           <TextField id="outlined-basic" label="Other" variant="outlined" helperText="List ingredients separated by commas" />
 
-          <Button variant="contained" type="submit">Generate Recipe</Button>
+          <Button variant="contained" type="submit" disabled={showRecipe}>Generate Recipe</Button>
 
-          {showRecipe && <RecipeCard recipe={ingredients} />}
+          {showRecipe && <RecipeCard recipe={recipe} handleClose={handleClose} />}
         </form>
       </section>
 

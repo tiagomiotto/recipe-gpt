@@ -4,7 +4,7 @@ var { recipeCompletion } = require('../controllers/openai');
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
-  const response = await recipeCompletion("Give me a step by step recipe that I can cook with tomatoes, chicken breast, dry garlic, salt, pepper, milk and mayonaise in portuguese and with portions in grams");
+  const response = await recipeCompletion(`Give me a step by step recipe that I can cook with ${req.query.ingredients}.You can assume 4 servings. Use the metric system and no volumetric units.`);
   console.log(JSON.stringify(response, undefined, 2));
   res.send(response);
   // res.sendFile('../public/index.html');
